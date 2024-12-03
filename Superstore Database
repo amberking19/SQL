@@ -1,3 +1,5 @@
+#This project utilizes the following Superstore data:
+
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -27,10 +29,13 @@ VALUES
 
 #For this project, I used SQL to query the Superstore database to get information about items sold at the store and their prices.
 
+#Show a statistic about the item prices.
 SELECT SUM(price), item_name
 FROM superstore
 GROUP BY item_name;
 
+
+#Show a statistic about the price for items in the category of "Item Name".
 SELECT SUM(stock_quantity), item_name
 FROM superstore
 GROUP BY item_name;
